@@ -62,7 +62,7 @@ public final class NpmUtil {
 
 	public static PackageJson parsePackageJsonFile(final IFile packageJsonFile)
 			throws UnsupportedEncodingException, CoreException {
-		JsonReader reader = new JsonReader(new InputStreamReader(packageJsonFile.getContents(), "UTF-8"));
+		JsonReader reader = new JsonReader(new InputStreamReader(packageJsonFile.getContents(), NpmConstants.UTF_8));
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 		PackageJson pj = gson.fromJson(reader, PackageJson.class);
