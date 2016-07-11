@@ -109,7 +109,7 @@ public class GruntFileContentProvider implements ITreeContentProvider, IResource
 	 */
 	@Override
 	public boolean hasChildren(Object element) {
-		return false;
+		return element instanceof IFile;
 	}
 
 	/*

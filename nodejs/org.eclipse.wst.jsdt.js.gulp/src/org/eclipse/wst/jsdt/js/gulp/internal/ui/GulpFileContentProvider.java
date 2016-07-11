@@ -105,7 +105,7 @@ public class GulpFileContentProvider implements ITreeContentProvider, IResourceC
 	 */
 	@Override
 	public boolean hasChildren(Object element) {
-		return false;
+		return element instanceof IFile;
 	}
 
 	/*
